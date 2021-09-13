@@ -5,11 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ranga Store</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <title>Classic Closet</title>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
 
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,27 +20,32 @@
 
 <body>
   <header></header>
-  <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
+  <main class="main container">
+    <div class="container rounded main-bg">
+      <div class="row my-5">
+        <div class="col-md-3">
+          <h3 class="fw-bold heading"><i class="fas fa-feather-alt fw-bold"></i>Classic Closet</h3>
+        </div>
+
+        <div class="input-group w-75 col-md-9 rounded-2">
+          <input id="input-field" type="text" class="search-field form-control bg-light" placeholder="Search"
+            aria-label="Search items" aria-describedby="button-addon2">
+          <button onclick="loadProducts()" class="search-button btn btn-outline-secondary" type="button"
+            id="search-btn"><i class="fas fa-search text-white"> Search</i></button>
+        </div>
       </div>
     </div>
+
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
-          <h1></h1>
         </div>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
             <thead>
-              <h1>My-Cart</h1>
+              <h3 class="text-center cart-header">My-Cart &nbsp <i class="fas fa-shopping-bag fs-2"></i></h3>
               <tr>
                 <th scope="col"></th>
                 <th scope="col"></th>
@@ -50,7 +56,7 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <td><span id="total-Products">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -62,7 +68,7 @@
               </tr>
               <tr>
                 <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">20</span></td>
+                <td>$ <span id="delivery-charge">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -80,16 +86,24 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn-details text-center">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <footer></footer>
+  <footer>
+    <div class="copyright w-50 mt-4">
+      <p><span class="text-black fw-bold">Copyright-2021 © All Rights Reserved by</span> &nbsp <span
+          class="text-danger fw-bold">Classic Closet</span></p>
+    </div>
+  </footer>
 
   <!-- add javascript  file  -->
-  <script src="./js/app.js"></script>
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
