@@ -1,43 +1,18 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(95, 182, 182);
+  background-color: antiquewhite;
 }
-/* .search-field {
-  border: none;
-  border-radius: 10px;
-  padding: 5px;
-  outline: none;
-}
-.search-field:hover {
-  outline: none;
-  border: none;
-}
-.search-box {
-  border: 1px solid rgb(3, 118, 211);
-  width: 281px;
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 50px;
-  border-right: none;
-}
-.search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
-} */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid green; */
   text-align: center;
   width: 100%;
-  /* margin: 30px; */
   align-items: center;
   justify-content: center;
 }
 .single-product, .cart {
-  height: 510px;
+  height: 440px;
   width: 280px;
   border-radius: 10px;
   background-image: linear-gradient(burlywood, peachpuff);
@@ -64,16 +39,12 @@ body {
   margin-right: 20px;
   position: fixed;
 }
-.search-button{
-  background-color: rgb(156, 22, 22);
+.search-button,header{
+  background-color:rgb(64, 114, 89);
 }
-h6, h3{
-  color: rgb(156, 22, 22);
+h6, h3, .cart-header{
+  color: rgb(64, 114, 89);
   font-weight: bold;
-}
-.fa-star, .half{
-  color: hsl(170, 68%, 33%);
-  /* color: rgb(214, 168, 16); */
 }
 .cart-main {
   padding-right: 30px;
@@ -82,17 +53,20 @@ h6, h3{
   color: rgb(68, 44, 36);
   font-weight: bold;
 }
-.cart-header, .p-clr{
-  color: rgb(64, 114, 89);
+.p-clr{
+  color: darkslategrey;
   font-weight: bold;
 }
 .btn-details{
-  /* background-color: rgb(190, 113, 135); */
-  background-color:teal;
+  background-color: peru;
   color: white;
   padding: 7px 22px;
   border: none;
   border-radius: 8px;
+}
+.ct-clr{
+  color: rgb(64, 114, 89);
+  font-weight: bold;
 }
 .btn-cart{
   background-color: rgb(64, 114, 89);
@@ -109,7 +83,6 @@ h6, h3{
   }
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
     padding: 10px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;

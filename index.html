@@ -19,12 +19,37 @@
 </head>
 
 <body>
-  <header></header>
+  <!-- Header Area -->
+  <header class="header">
+    <small>
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+          <a class="nav-link text-white" aria-current="page" href="#">Trusted Online Shopping Site in Bangladesh</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Open 24 hours</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">How to buy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white">Sell with Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white"><i class="fas fa-user px-1"></i>Login</a>
+        </li>
+      </ul>
+    </small>
+  </header>
+
+  <!-- Main Area -->
   <main class="main container">
+
+    <!-- Search Area -->
     <div class="container rounded main-bg">
-      <div class="row my-5">
+      <div class="row my-3">
         <div class="col-md-3">
-          <h3 class="fw-bold heading"><i class="fas fa-feather-alt fw-bold"></i>Classic Closet</h3>
+          <h3 class="fw-bold heading"><i class="fas fa-feather-alt fs-2 px-1"></i>Classic Closet</h3>
         </div>
 
         <div class="input-group w-75 col-md-9 rounded-2">
@@ -36,14 +61,21 @@
       </div>
     </div>
 
+    <!-- Single Product Details -->
+    <div id="product-details" class="mx-auto rounded-5" style="max-width: 420px;">
+    </div>
+
+    <!-- Products Area -->
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
         </div>
       </div>
+
+      <!-- My Cart Area -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
-          <table class="table">
+          <table class="table category">
             <thead>
               <h3 class="text-center cart-header">My-Cart &nbsp <i class="fas fa-shopping-bag fs-2"></i></h3>
               <tr>
@@ -94,8 +126,8 @@
   </main>
   <footer>
     <div class="copyright w-50 mt-4">
-      <p><span class="text-black fw-bold">Copyright-2021 © All Rights Reserved by</span> &nbsp <span
-          class="text-danger fw-bold">Classic Closet</span></p>
+      <p><small><span class="category fw-bold">Copyright-2021 © All Rights Reserved by</span> &nbsp <span
+            class="text-danger fw-bold">Classic Closet</span></small></p>
     </div>
   </footer>
 

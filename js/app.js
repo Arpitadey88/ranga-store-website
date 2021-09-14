@@ -15,20 +15,12 @@ const showProducts = (products) => {
       <div>
       <img class="product-image" src=${product.image}></img>
       </div>
-      <h6>${product.title}</h3>
-      <p><span class="p-clr">Category:</span> <span class="category">${product.category}</span></p>
+      <h6>${product.title.slice(0, 40)}</h3>
+      <p><span class="ct-clr">Category:</span> <span class="category">${product.category}</span></p>
       <p class="p-clr">Ratings: ${product.rating.rate}  &nbsp &nbsp Views: ${product.rating.count}</p>
-      <p><small>
-           <i class="fas fa-star filled"></i>
-           <i class="fas fa-star filled"></i>
-           <i class="fas fa-star filled"></i>
-           <i class="fas fa-star-half-alt half"></i>
-           <i class="far fa-star"></i>
-      </small></p>
       <h6>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn-cart">Add to Cart</button>
-      <button id="details-btn" class="btn-details">Details</button></div>
-      `;
+      <button onclick="loadProductDetail('${product.id}')" id="details-btn" class="btn-details">Details</button></div>`;
     document.getElementById("all-products").appendChild(div);
   }
 };
@@ -88,3 +80,32 @@ const updateTotal = () => {
   document.getElementById("total").innerText = parseFloat(grandTotal.toFixed(2));
 };
 loadProducts();
+
+// display single product in UI
+const loadProductDetail = id => {
+  const url = `https://fakestoreapi.com/products/${id}`;
+  fetch(url)
+    .then(res => res.json())
+    .then(data => displayProductDetail(data))
+}
+const displayProductDetail = product => {
+  const productDetails = document.getElementById('product-details');
+  productDetails.textContent = '';
+  const div = document.createElement('div');
+  div.classList.add('card');
+  div.innerHTML = `
+        <div class="row g-3 p-3 mb-3">
+          <div class="col-md-4">
+            <img src="${product.image}" class="img-fluid" alt="...">
+          </div>
+          <div class="col-md-8">
+              <h6 class="card-title">${product.title}</h6>
+              <p class="text-secondary"><small><span class="category">Category:&nbsp</span>${product.category}</small></p>
+              <p class="text-secondary"><small><span class="category">Details:&nbsp</span>${product.description.slice(0, 100)}</small></p>    
+          </div>
+        </div>`;
+  productDetails.appendChild(div);
+  div.style.backgroundColor = 'peachpuff';
+  div.style.border = 'none';
+  div.style.borderRadius = '10px';
+}
