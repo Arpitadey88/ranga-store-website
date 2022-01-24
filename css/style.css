@@ -1,7 +1,7 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
-  background-color: antiquewhite;
+  background-color: white;
 }
 #all-products {
   display: grid;
@@ -15,7 +15,7 @@ body {
   height: 440px;
   width: 280px;
   border-radius: 10px;
-  background-image: linear-gradient(burlywood, peachpuff);
+  background-image: linear-gradient(whitesmoke, gainsboro);
   margin: 10px;
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
